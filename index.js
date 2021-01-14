@@ -25,7 +25,7 @@ server.on('connection', function(socket) {
   });
 });
 app.get('/', function (req, res) {
-   res.send('Hello World');
+   res.send('bro this is an websocket why are you visiting in browser');
 })
 
 var server = app.listen(8081, function () {
