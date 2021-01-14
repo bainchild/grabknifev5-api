@@ -23,9 +23,8 @@ wserver.on('connection', function(socket) {
     console.log("Socket closed")
   });
 });
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render(path.join(__dirname+'/index')))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+var app = express()
+app.listen(process.env.PORT || 3000 ,function() console.log("Started"));
+app.get("/",function(req,res)
+   res.send("H")
+end)
