@@ -23,14 +23,9 @@ wserver.on('connection', function(socket) {
     console.log("Socket closed")
   });
 });
-var app = express()
-app.get('/', function (req, res) {
-   res.send('bro this is an websocket why are you visiting in browser');
-})
-
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
-   
-   console.log("app listening at http://%s:%s", host, port)
-})
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
