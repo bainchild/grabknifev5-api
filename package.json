@@ -1,0 +1,31 @@
+{
+  "name": "grabknifev5-api",
+  "version": "0.3.0",
+  "description": "grabknifev5-api",
+  "engines": {
+    "node": "12.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "ws": "^1"
+  },
+  "devDependencies": {
+    "got": "^11.3.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bainchild/grabknifev5-api"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
