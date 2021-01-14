@@ -23,6 +23,7 @@ wserver.on('connection', function(socket) {
     console.log("Socket closed")
   });
 });
+var app = express()
 app.get('/', function (req, res) {
    res.send('bro this is an websocket why are you visiting in browser');
 })
