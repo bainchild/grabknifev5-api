@@ -25,6 +25,6 @@ wserver.on('connection', function(socket) {
 });
 var app = express()
 app.listen(PORT,function(){console.log("Started")});
-app.get("/",function(req,res)
+app.get("/",function(req,res){
    res.send("H")
-end)
+})
