@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "grabknifev5-api",
+    "build": "npm i -dev && grabknifev5-api --mode production",
     "heruko-postbuild": "npm build"
   },
   "dependencies": {
