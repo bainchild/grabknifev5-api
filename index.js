@@ -1,3 +1,7 @@
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
+const WebSocket = require('ws');
 const WebSocket = require('ws');
 const server = new WebSocket.Server({
   port: 1234
@@ -20,3 +24,13 @@ server.on('connection', function(socket) {
     console.log("Socket closed")
   });
 });
+app.get('/', function (req, res) {
+   res.send('Hello World');
+})
+
+var server = app.listen(8081, function () {
+   var host = server.address().address
+   var port = server.address().port
+   
+   console.log("app listening at http://%s:%s", host, port)
+})
