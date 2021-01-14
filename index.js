@@ -24,7 +24,7 @@ wserver.on('connection', function(socket) {
   });
 });
 var app = express()
-app.listen(process.env.PORT || 3000 ,function() console.log("Started"));
+app.listen(PORT,function(){console.log("Started")});
 app.get("/",function(req,res)
    res.send("H")
 end)
