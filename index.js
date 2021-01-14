@@ -2,11 +2,11 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const WebSocket = require('ws');
-const server = new WebSocket.Server({
+const wserver = new WebSocket.Server({
   port: 1234
 });
 let sockets = [];
-server.on('connection', function(socket) {
+wserver.on('connection', function(socket) {
   sockets.push(socket);
 
   // When you receive a message, send that message to every socket.
